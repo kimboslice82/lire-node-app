@@ -1,0 +1,19 @@
+{
+  "name": "lire-node-app",
+  "version": "1.0.0",
+  "description": "liri app",
+  "main": "liri.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kimboslice82/lire-node-app.git"
+  },
+  "author": "me",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kimboslice82/lire-node-app/issues"
+  },
+  "homepage": "https://github.com/kimboslice82/lire-node-app#readme"
+}

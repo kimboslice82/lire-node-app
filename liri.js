@@ -1,16 +1,32 @@
-//code to grab data from keys.js
-var keys = require("keys.js");
+var keys = require('./keys.js').twitterKeys;
 
+var Twitter = require('twitter');
 
+var command = process.argv[2];
+//console.log(process.argv);
 
+switch (command ){
+    case "my-tweets":
+  
+        var client = new Twitter(keys);
+        var params = {screen_name: 'hoodkimberley11', count: 20};
+    client.get('statuses/user_timeline', params, function(error, tweets, response) {
+    if (!error) {
+        tweets.forEach(function(tweet) {
+            console.log(tweet.text);
+        })
+    }
+    });
+    break;
+    case 'spotify-this-song':
+    console.log("test this crap again");
+    break;
 
-// If there is an error log it.
-  if (err) {
-    console.log(err);
+case 'movie-this':
+    console.log("test this crap again again");
+    break;
+
+    case 'do-what-it-says':
+    console.log("test this crap last");
+    break;
   }
-
-  // If there is no error... then print out the weather data.
-  // We use JSON.stringify to print the data in string format.
-  // We use the JSON.stringify argument of "2" to make the format pretty.
-  // See link here: http://stackoverflow.com/questions/4810841/how-can-i-pretty-print-json-using-javascript
-  console.log(JSON.stringify(result, null, 2));
